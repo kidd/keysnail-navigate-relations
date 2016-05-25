@@ -68,15 +68,13 @@ function navi_up(){
     window.content.document.location = url.replace(/[^/]*\/?$/,'');
 }
 
-
-ext.add("navi-next", navi_next , M({en: navi_next_doc}));
-ext.add("navi-prev", navi_prev , M({en: navi_prev_doc}));
-ext.add("navi-up", navi_up , M({en: navi_prev_doc}));
-
 var navi_next_doc =   'Navigates to next page';
 var navi_prev_doc =   'Navigates to previous page';
 var navi_up_doc =   'Navigates to upper in the url structure';
 
+ext.add("navi-next", navi_next , M({en: navi_next_doc}));
+ext.add("navi-prev", navi_prev , M({en: navi_prev_doc}));
+ext.add("navi-up", navi_up , M({en: navi_up_doc}));
 
 key.setViewKey(["]", "]"], function (ev) {
     navi_next();
