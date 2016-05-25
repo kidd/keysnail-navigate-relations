@@ -44,8 +44,7 @@ function rel_dir(dir){
     }
     function rel(elems, dir){
         for (var i in elems) {
-            if(elems[i].rel == dir) {
-                alert(elems[i].rel);
+            if((new RegExp("^"+dir, 'i')).test(elems[i].rel)) {
                 window.content.document.location = elems[i].href;
                 return true;
             }
@@ -55,11 +54,11 @@ function rel_dir(dir){
 }
 
 function navi_prev(){
-    rel_dir('previous') || navi_dir(['previous', 'prev','<']);
+    rel_dir('prev') || navi_dir(['prev','<']);
 }
 
 function navi_next(){
-    rel_dir('next') || navi_dir(['next', 'Next', '>']);
+    rel_dir('next') || navi_dir(['next', '>']);
 }
 
 ext.add("navi-next", navi_next , M({en: navi_next_doc}));
