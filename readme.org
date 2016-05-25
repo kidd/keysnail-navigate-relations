@@ -1,0 +1,4 @@
+* Name
+  Navigate Relations
+* What's it
+  Navigate through 'next'/'previous'  link relations or normal 'a href' links with ]] and [[.emqq
