@@ -2,3 +2,6 @@
   Navigate Relations
 * What's it
   Navigate through 'next'/'previous'  link relations or normal 'a href' links with ]] and [[.emqq
+* Install
+  Install it as a keysnail plugin.
+  The file url is: https://raw.githubusercontent.com/kidd/keysnail-navigate-relations/master/navigate-relations.ks.js
