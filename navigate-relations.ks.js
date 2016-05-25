@@ -16,6 +16,8 @@ var PLUGIN_INFO =
     <detail><![CDATA[
 === Usage ===
             Use \]\] to go to logical 'next' page, and \[\[ to the 'previous' one.
+            '^' moves upper in the url structure
+
     ]]></detail>
 </KeySnailPlugin>;
 
@@ -61,17 +63,29 @@ function navi_next(){
     rel_dir('next') || navi_dir(['next', '>']);
 }
 
+function navi_up(){
+    var url = window.content.document.location.href.toString();
+    window.content.document.location = url.replace(/[^/]*\/?$/,'');
+}
+
+
 ext.add("navi-next", navi_next , M({en: navi_next_doc}));
 ext.add("navi-prev", navi_prev , M({en: navi_prev_doc}));
+ext.add("navi-up", navi_up , M({en: navi_prev_doc}));
 
 var navi_next_doc =   'Navigates to next page';
 var navi_prev_doc =   'Navigates to previous page';
+var navi_up_doc =   'Navigates to upper in the url structure';
 
 
 key.setViewKey(["]", "]"], function (ev) {
     navi_next();
-            }, navi_next_doc, true);
+}, navi_next_doc, true);
 
 key.setViewKey(["[", "["], function (ev) {
     navi_prev();
-            },  navi_prev_doc, true);
+},  navi_prev_doc, true);
+
+key.setViewKey(["^"], function (ev) {
+    navi_up();
+}, navi_up_doc, true);
