@@ -56,7 +56,7 @@ function rel_dir(dir){
 }
 
 function navi_prev(){
-    rel_dir('prev') || navi_dir(['prev','<']);
+    rel_dir('prev') || navi_dir(['prev', 'previous', '<']);
 }
 
 function navi_next(){
