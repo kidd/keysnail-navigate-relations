@@ -65,7 +65,7 @@ function navi_next(){
 
 function navi_up(){
     var url = window.content.document.location.href.toString();
-    window.content.document.location = url.replace(/[^/]*\/?$/,'');
+    rel_dir('up') || (window.content.document.location = url.replace(/[^/]*\/?$/,''))
 }
 
 var navi_next_doc =   'Navigates to next page';
