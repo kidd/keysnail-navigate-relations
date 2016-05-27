@@ -1,7 +1,7 @@
 * Name
   Navigate Relations
 * What's it
-  Navigate through 'next'/'previous'  link relations or normal 'a href' links with ]] and [[.emqq
+  Navigate through next/previous/up link relations or normal 'a href' links with ]]/[[/^.
 * Install
   Install it as a keysnail plugin.
   The file url is: https://raw.githubusercontent.com/kidd/keysnail-navigate-relations/master/navigate-relations.ks.js
