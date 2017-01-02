@@ -24,7 +24,7 @@ var PLUGIN_INFO =
 function matching_text(aTags, searchText){
     var found;
     for (var i = 0; i < aTags.length; i++) {
-        if (aTags[i].textContent == searchText) {
+        if (aTags[i].textContent.toLowerCase() == searchText.toLowerCase()) {
             found = aTags[i];
             return found;
         }
