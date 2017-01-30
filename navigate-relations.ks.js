@@ -24,7 +24,7 @@ var PLUGIN_INFO =
 function matching_text(aTags, searchText){
     var found;
     for (var i = 0; i < aTags.length; i++) {
-        if (aTags[i].textContent.toLowerCase() == searchText.toLowerCase()) {
+        if (aTags[i].textContent.trim().toLowerCase() == searchText.toLowerCase()) {
             found = aTags[i];
             return found;
         }
@@ -56,11 +56,11 @@ function rel_dir(dir){
 }
 
 function navi_prev(){
-    rel_dir('prev') || navi_dir(['prev', 'previous', '<']);
+    rel_dir('prev') || navi_dir(['prev', 'prev:', 'previous', '<']);
 }
 
 function navi_next(){
-    rel_dir('next') || navi_dir(['next', '>']);
+    rel_dir('next') || navi_dir(['next', 'next:' '>']);
 }
 
 function navi_up(){
